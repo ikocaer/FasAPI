@@ -1,0 +1,2 @@
+Proje Run:
+Proje dosyası içinde termianl: uvicorn books2:app
