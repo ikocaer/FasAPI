@@ -4,3 +4,9 @@ Proje dosyası içinde termianl: uvicorn books2:app
 base64 encode:
 with open("download.jpeg", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read())
+
+Console'a log veya önemli aksiyonların basılması için kullanılabilir.
+async def figlets():
+        f = Figlet(font='slant')
+        print(f.renderText('Database Connections APIs'))
+        return f.renderText("APIs")
