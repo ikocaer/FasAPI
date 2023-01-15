@@ -1,3 +1,5 @@
+import base64
+
 from fastapi import FastAPI
 from enum import Enum
 from typing import Optional
@@ -69,7 +71,8 @@ async def delete_book(book_name):
     del BOOKS[book_name]
     return f"Book_{book_name} deleted."
 
-
+with open("download.jpeg", "rb") as image_file:
+    encoded_string = base64.b64encode(image_file.read())
 
 
 
