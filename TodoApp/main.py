@@ -7,14 +7,13 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 
 app = FastAPI()
+models.Base.metadata.create_all(bind=engine)
 
 @app.get("/figlet")
 async def figlets():
         f = Figlet(font='slant')
         print(f.renderText('Database Connections APIs'))
         return f.renderText("APIs")
-
-models.Base.metadata.create_all(bind=engine)
 
 def get_db():
     try:

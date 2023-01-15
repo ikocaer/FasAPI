@@ -10,3 +10,9 @@ async def figlets():
         f = Figlet(font='slant')
         print(f.renderText('Database Connections APIs'))
         return f.renderText("APIs")
+
+Komutların çalışması için
+uvicorn main:app --reload
+
+Hash User Passwd
+pip install "passlib[bcrypt]"
