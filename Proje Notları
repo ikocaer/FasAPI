@@ -16,3 +16,10 @@ uvicorn main:app --reload
 
 Hash User Passwd
 pip install "passlib[bcrypt]"
+
+Port değişikliği
+uvicorn auth:app --reload --port 9000
+
+150815-iK
+
+pip install psycopg2-binary
